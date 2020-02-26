@@ -1,0 +1,55 @@
+<html>
+<style>
+    body {
+        position: relative;
+    }
+
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type=submit] { /**/
+        border-radius: 5px;
+        border: 0;
+        width: 80px;
+        height: 25px;
+        background: rgba(191, 191, 191, 0.96);
+    }
+
+    input[type=submit]:hover {
+        background: rgba(163, 163, 163, 0.96);
+    }
+</style>
+<body>
+<form action="./addBeer.php" method="post">
+
+    <h1>Beer Tracker</h1>
+
+    <input type="text"
+           name="beerName"
+           placeholder="Beer Name"
+           minlength="3"
+           autofocus="autofocus"
+           autocapitalize="words">
+    <br>
+    <input type="text"
+           name="brewery"
+           placeholder="Brewery">
+    <br>
+    <input type="number"
+           step="any"
+           name="abv"
+           placeholder="% ABV">
+    <br>
+    <input type="submit">
+</form>
+
+</body>
+</html>
