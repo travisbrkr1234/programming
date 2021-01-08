@@ -11,15 +11,16 @@ Examples and lessons for beginning object oriented programming
 
 
 #### Mysql setup
+##### Windows setup
 1. Install mysql 5.6.49 (64 bit) from the list [here](https://downloads.mysql.com/archives/installer)
 1. Download the bottom file ~300Mb
 1. Choose custom install
 1. Install the required C++ redist if you are missing any
-```
- - Install mysql server
- - workbench
- - documentation
- ```
+    ```
+    - Install mysql server
+    - workbench
+    - documentation
+    ```
 1. Choose development computer in the setup
 1. Tcp ip port 3306
 1. When you get to the “start a windows service” step add Server with no spaces to the end of the service name, something like MYSQL56Server
@@ -68,6 +69,12 @@ LIMIT
 
 #### INSERT INTO
 {voulunteer}
+Inserts a row into the specified table. By default will require all columns to be provided. If the table has an auto-increment column, provide null for the auto-increment column in order to use the mysql generated number.
+
+```
+INSERT INTO {{tableName}} VALUES ('firstValue', 2, 'someEmail@example.com', 'etc...');
+```
+
 
 #### TRUNCATE
 {voulunteer}
