@@ -15,16 +15,20 @@ Examples and lessons for beginning object oriented programming
 1. Download the bottom file ~300Mb
 1. Choose custom install
 1. Install the required C++ redist if you are missing any
+```
  - Install mysql server
  - workbench
  - documentation
+ ```
+1. Choose development computer in the setup
+1. Tcp ip port 3306
 1. When you get to the “start a windows service” step add Server with no spaces to the end of the service name, something like MYSQL56Server
-1. start + R
-1. services.msc
-1. ensure mysql server running
-1. attempt to connect via workbench
-1. tcp ip port 3306 
-1. choose development computer in the setup
+1. Hold the start button on the keyboard and press the letter `r`
+1. Type `services.msc`
+1. Press the `enter` key
+1. Ensure mysql server running `MYSQL56Server`
+1. Complete the installation
+1. Attempt to connect via workbench
 
 
 ## Queries Cheat-Sheet
@@ -56,10 +60,14 @@ DROP {{databaseName}};
 ```
 SELECT * FROM {{databaseName}};
 ```
-e.x `SELECT * FROM Vehicles;`
+e.x `SELECT * FROM vehicles;`
 
 - clauses
+LIMIT
+`SELECT * FROM animals LIMIT 5;`
 
 #### INSERT INTO
+{voulunteer}
 
 #### TRUNCATE
+{voulunteer}
