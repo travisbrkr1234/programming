@@ -33,14 +33,32 @@ Examples and lessons for beginning object oriented programming
 #### USE
 Selects a default database to run queries against.
 
+```
+USE {{databaseName}};
+```
+
 #### CREATE
 Creates a schema (database) or table
+
+```
+CREATE {{databaseName}};
+```
 
 #### DROP
 Deletes/removes a database and tables or just a specified table
 
+```
+DROP {{databaseName}};
+```
+
 #### SELECT
-clauses
+
+```
+SELECT * FROM {{databaseName}};
+```
+e.x `SELECT * FROM Vehicles;`
+
+- clauses
 
 #### INSERT INTO
 
