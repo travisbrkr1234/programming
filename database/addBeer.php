@@ -1,8 +1,8 @@
 <?php
 if (count($_POST) > 0 && isset($_POST["beerName"])) { //Check for post params
     $servername = "127.0.0.1";
-    $username = "wyatt";
-    $password = "password";
+    $username = $_ENV["MYSQL_USER"];
+    $password = $_ENV["MYSQL_PASSWORD"];
     $dbname = "php_examples";
 
 // Create connection
