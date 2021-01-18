@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "fc24e333-a775-4299-a2c9-19f634427269",
+		"name": "phpStuff",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Contact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "test2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "example",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://examples.carlosdev.com/addContact.php",
+					"protocol": "http",
+					"host": [
+						"examples",
+						"carlosdev",
+						"com"
+					],
+					"path": [
+						"addContact.php"
+					]
+				},
+				"description": "Add Contact"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://examples.carlosdev.com/contacts.php?api=true",
+					"protocol": "http",
+					"host": [
+						"examples",
+						"carlosdev",
+						"com"
+					],
+					"path": [
+						"contacts.php"
+					],
+					"query": [
+						{
+							"key": "api",
+							"value": "true"
+						}
+					]
+				},
+				"description": "Get Contacts"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Contact",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://examples.carlosdev.com/contact.php?id=18&password=example",
+					"protocol": "http",
+					"host": [
+						"examples",
+						"carlosdev",
+						"com"
+					],
+					"path": [
+						"contact.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "18"
+						},
+						{
+							"key": "password",
+							"value": "example"
+						}
+					]
+				},
+				"description": "Delete Contact"
+			},
+			"response": []
+		}
+	]
+}
