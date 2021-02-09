@@ -6,11 +6,13 @@ Examples and lessons for beginning object oriented programming
 
 
 #### Mysql setup
+
 ##### Windows setup
 1. Install mysql 5.6.49 (64 bit) from the list [here](https://downloads.mysql.com/archives/installer)
 1. Download the bottom file ~300Mb
 1. Choose custom install
 1. Install the required C++ redist if you are missing any
+1. Drilldown using the plus signs and install the following
     ```
     - Install mysql server
     - workbench
@@ -18,7 +20,13 @@ Examples and lessons for beginning object oriented programming
     ```
 1. Choose development computer in the setup
 1. Tcp ip port 3306
+1. Leave Open Windows Firewall port for network access checked
+1. Type in "password" all lowercase for MySQL Root Password
 1. When you get to the “start a windows service” step add Server with no spaces to the end of the service name, something like MYSQL56Server
+1. Click Next
+1. Click Execute
+1. Click Next
+1. Click Finish
 1. Hold the start button on the keyboard and press the letter `r`
 1. Type `services.msc`
 1. Press the `enter` key
