@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fc24e333-a775-4299-a2c9-19f634427269",
+		"_postman_id": "5dc20473-08f8-4c5d-ac4f-3579e4a15af3",
 		"name": "phpStuff",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -60,13 +60,52 @@
 		},
 		{
 			"name": "Get Contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"First Name is a string\", () => {\r",
+							"  const contact = pm.response.json();\r",
+							"  pm.expect(contact[0].first_name).to.be.a(\"string\");\r",
+							"});\r",
+							"pm.test(\"Body text contains id\",() => {\r",
+							"pm.expect(pm.response.text()).to.include(\"id\");\r",
+							"});\r",
+							"pm.test(\"JSON Body id is a string\",() => {\r",
+							"pm.expect(pm.response.json()[0].id).to.be.a(\"string\");\r",
+							"});\r",
+							"pm.test(\"Email a valid email address\",() => {\r",
+							"    const contact = pm.response.json();\r",
+							"    pm.expect(contact[0].email).to.include(\"@\");\r",
+							"});\r",
+							"pm.test(\"'@' symbol exists\",() => {\r",
+							"  const contact = pm.response.json();\r",
+							"  const contactCount = contact.length;\r",
+							"  pm.expect(contactCount).to.equal(33);\r",
+							"});\r",
+							"pm.test(\"'@' symbol exists2\",() => {\r",
+							"  const contact = pm.response;\r",
+							"//pm.expect(contact)to.be.below\r",
+							"//pm.response.headers\r",
+							"//Get request length\r",
+							"var rdata = request.data;\r",
+							"console.log(rdata);\r",
+							"//var requestLength = JSON.stringify(JSON.parse(rdata)).length;\r",
+							"//pm.environment.set(\"requestLength\", requestLength);\r",
+							"//console.log(requestLength);\r",
+							"  });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
 					"raw": "http://examples.carlosdev.com/contacts.php?api=true",
 					"protocol": "http",
@@ -101,7 +140,6 @@
 						"type": "text"
 					}
 				],
-				"body": {},
 				"url": {
 					"raw": "http://examples.carlosdev.com/contact.php?id=18&password=example",
 					"protocol": "http",
