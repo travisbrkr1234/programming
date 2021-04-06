@@ -100,12 +100,13 @@ A: I would look at [this answer](https://stackoverflow.com/questions/11321491/wh
 Q: What is the difference between URI and URL?
 A: We will discuss this but please read [this](https://stackoverflow.com/questions/176264/what-is-the-difference-between-a-uri-a-url-and-a-urn) as it references the IETF RFC as well as gives a thorough explanation. In our sessions, I will recognize either (uri/url) as OK to use, in the real world engineers use them interchangeably sometimes.
 
-#### Nosko 2
+#### Nosko
 Notes for the CMD work we did
 mkdir  -  make directory
-move  -  move file
-cd  -  change directory
 del  -  delete 
 dir  -  directory
+move  -  move file
+cd  -  change directory
 ../  -  with 'cd ../' goes back/up a directory
 cls  -  Clears the terminal (command prompt)
+@doskey -sets an alias or macro in windows
