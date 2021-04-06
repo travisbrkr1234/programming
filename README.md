@@ -108,3 +108,5 @@ dir  -  directory
 move  -  move file
 cd  -  change directory
 ../  -  with 'cd ../' goes back/up a directory
+cls  -  Clears the terminal (command prompt)
+@doskey -sets an alias or macro in windows
